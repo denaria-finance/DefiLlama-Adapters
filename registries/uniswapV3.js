@@ -538,6 +538,7 @@ const uniV3Configs = {
     flow: {
       factory: '0xca6d7Bb03334bBf135902e1d919a5feccb461632',
       fromBlock: 42141486,
+      blacklistedTokens: ['0x2c23fa3f22273194f7a046281861551996183e8d']
     },
   },
   'fluxion-network': {
@@ -1083,6 +1084,7 @@ const uniV3Configs = {
     hyperliquid: {
       factory: '0xff7b3e8c00e57ea31477c32a5b52a58eea47b072',
       fromBlock: 7876741,
+      permitFailure: true,
     },
   },
   'quickswap-v3': {
@@ -1582,6 +1584,12 @@ const uniV3Configs = {
     wemix: {
       factory: '0x8EFf28B531B731814e4E4fFfa0F7Bd0FC50f370F',
       fromBlock: 33104424,
+    },
+  },
+  'capybara-v3': {
+    klaytn: {
+      factory: '0xC4C8310080F209629EC4c349cb2A3c6720e1176D',
+      fromBlock: 172328824,
     },
   },
   'winnieswap': {

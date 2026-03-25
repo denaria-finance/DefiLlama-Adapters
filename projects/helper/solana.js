@@ -10,6 +10,7 @@ const { queryAllium } = require('./allium');
 
 const sdk = require('@defillama/sdk');
 const { endpointMap, endpoint } = require('./svmChainConfig.js')
+const { addRaydiumPositions } = require('../krystal/solana.js')
 
 /** Address of the SPL Token program */
 const TOKEN_PROGRAM_ID = new PublicKey('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA')
@@ -593,7 +594,7 @@ async function sumTokens2_historical({
 
       // Helper to check if mint is native SOL (canonical: So11111..., Allium variant: Sol11111...)
       const isNativeSOL = (mint) => {
-        return mint === ADDRESSES.solana.SOL || mint === 'So11111111111111111111111111111111111111112';
+        return mint === ADDRESSES.solana.SOL || mint === ADDRESSES.solana.SOL;
       };
 
       const tokenBalances = {};
@@ -743,4 +744,5 @@ module.exports = {
   i80f48ToNumber,
   runInChunks,
   getTokenAccountBalances,
+  addRaydiumPositions,
 };
